@@ -28,6 +28,7 @@ dependencies {
     kotlin()
     androidFoundation()
     koin()
+    core()
 
     unitTest()
     androidTest()

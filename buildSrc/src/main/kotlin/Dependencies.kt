@@ -18,6 +18,7 @@ object Versions {
 	const val junit = "4.13"
 	const val androidxExtJunit = "1.1.1"
 	const val androidxEspresso = "3.2.0"
+	const val coil = "0.11.0"
 }
 
 object Deps {
@@ -29,6 +30,7 @@ object Deps {
 	const val koinViewModel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
 	const val koinFragment = "org.koin:koin-androidx-fragment:${Versions.koin}"
 	const val koinExt = "org.koin:koin-androidx-ext:${Versions.koin}"
+	const val coil = "io.coil-kt:coil:${Versions.coil}"
 
 	const val junit = "junit:junit:${Versions.junit}"
 	const val androidxExtJunit = "androidx.test.ext:junit:${Versions.androidxExtJunit}"

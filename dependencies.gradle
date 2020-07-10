@@ -24,6 +24,26 @@ ext.koin = dependencyGroup {
     implementation Deps.koinExt
 }
 
+ext.coil = dependencyGroup {
+    implementation Deps.coil
+}
+
+ext.core = dependencyGroup {
+    implementation project(':core')
+}
+
+ext.about = dependencyGroup {
+    implementation project(':features:about')
+}
+
+ext.dashboard = dependencyGroup {
+    implementation project(':features:dashboard')
+}
+
+ext.profile = dependencyGroup {
+    implementation project(':features:profile')
+}
+
 ext.unitTest = dependencyGroup {
     testImplementation Deps.junit
 }

@@ -45,6 +45,9 @@ dependencies {
     kotlin()
     androidFoundation()
     koin()
+    about()
+    dashboard()
+    profile()
 
     unitTest()
     androidTest()
