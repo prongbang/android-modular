@@ -1,0 +1,36 @@
+def dependencyGroup = { Closure closure ->
+    closure.delegate = dependencies
+    return closure
+}
+
+def internal = dependencyGroup {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+}
+
+def kotlin = dependencyGroup {
+    implementation Deps.kotlinStdlib
+}
+
+def androidFoundation = dependencyGroup {
+    implementation Deps.androidxCoreKtx
+    implementation Deps.androidxAppCompat
+    implementation Deps.androidxConstraintLayout
+}
+
+def unitTest = dependencyGroup {
+    testImplementation Deps.junit
+}
+
+def androidTest = dependencyGroup {
+    androidTestImplementation Deps.androidxExtJunit
+    androidTestImplementation Deps.androidxEspresso
+}
+
+dependencies {
+    internal()
+    kotlin()
+    androidFoundation()
+
+    unitTest()
+    androidTest()
+}
