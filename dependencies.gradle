@@ -3,42 +3,32 @@ def dependencyGroup = { Closure closure ->
     return closure
 }
 
-def internal = dependencyGroup {
+ext.internal = dependencyGroup {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 }
 
-def kotlin = dependencyGroup {
+ext.kotlin = dependencyGroup {
     implementation Deps.kotlinStdlib
 }
 
-def androidFoundation = dependencyGroup {
+ext.androidFoundation = dependencyGroup {
     implementation Deps.androidxCoreKtx
     implementation Deps.androidxAppCompat
     implementation Deps.androidxConstraintLayout
 }
 
-def koin = dependencyGroup {
+ext.koin = dependencyGroup {
     implementation Deps.koinScope
     implementation Deps.koinViewModel
     implementation Deps.koinFragment
     implementation Deps.koinExt
 }
 
-def unitTest = dependencyGroup {
+ext.unitTest = dependencyGroup {
     testImplementation Deps.junit
 }
 
-def androidTest = dependencyGroup {
+ext.androidTest = dependencyGroup {
     androidTestImplementation Deps.androidxExtJunit
     androidTestImplementation Deps.androidxEspresso
-}
-
-dependencies {
-    internal()
-    kotlin()
-    androidFoundation()
-    koin()
-
-    unitTest()
-    androidTest()
 }
