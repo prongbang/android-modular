@@ -1,2 +1,6 @@
+include ':features:profile'
+include ':features:about'
+include ':features:dashboard'
+include ':core'
 include ':app'
 rootProject.name = "android-modular"
