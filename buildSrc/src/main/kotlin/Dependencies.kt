@@ -7,6 +7,7 @@ object Versions {
 	const val versionCode = 1
 	const val versionName = "1.0"
 	const val multidexEnabled = true
+	const val minifyEnabled = true
 
 	const val kotlin = "1.3.72"
 	const val androidX = "1.1.0"
