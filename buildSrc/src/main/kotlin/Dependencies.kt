@@ -12,6 +12,7 @@ object Versions {
 	const val androidX = "1.1.0"
 	const val androidxCore = "1.3.0"
 	const val androidxConstraintLayout = "1.1.3"
+	const val koin = "2.1.6"
 
 	const val junit = "4.13"
 	const val androidxExtJunit = "1.1.1"
@@ -23,6 +24,10 @@ object Deps {
 	const val androidxCoreKtx = "androidx.core:core-ktx:${Versions.androidxCore}"
 	const val androidxAppCompat = "androidx.appcompat:appcompat:${Versions.androidX}"
 	const val androidxConstraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.androidxConstraintLayout}"
+	const val koinScope = "org.koin:koin-androidx-scope:${Versions.koin}"
+	const val koinViewModel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
+	const val koinFragment = "org.koin:koin-androidx-fragment:${Versions.koin}"
+	const val koinExt = "org.koin:koin-androidx-ext:${Versions.koin}"
 
 	const val junit = "junit:junit:${Versions.junit}"
 	const val androidxExtJunit = "androidx.test.ext:junit:${Versions.androidxExtJunit}"

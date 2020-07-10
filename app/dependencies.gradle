@@ -17,6 +17,13 @@ def androidFoundation = dependencyGroup {
     implementation Deps.androidxConstraintLayout
 }
 
+def koin = dependencyGroup {
+    implementation Deps.koinScope
+    implementation Deps.koinViewModel
+    implementation Deps.koinFragment
+    implementation Deps.koinExt
+}
+
 def unitTest = dependencyGroup {
     testImplementation Deps.junit
 }
@@ -30,6 +37,7 @@ dependencies {
     internal()
     kotlin()
     androidFoundation()
+    koin()
 
     unitTest()
     androidTest()
