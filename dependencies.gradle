@@ -1,0 +1,54 @@
+def dependencyGroup = { Closure closure ->
+    closure.delegate = dependencies
+    return closure
+}
+
+ext.internal = dependencyGroup {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+}
+
+ext.kotlin = dependencyGroup {
+    implementation Deps.kotlinStdlib
+}
+
+ext.androidFoundation = dependencyGroup {
+    implementation Deps.androidxCoreKtx
+    implementation Deps.androidxAppCompat
+    implementation Deps.androidxConstraintLayout
+}
+
+ext.koin = dependencyGroup {
+    implementation Deps.koinScope
+    implementation Deps.koinViewModel
+    implementation Deps.koinFragment
+    implementation Deps.koinExt
+}
+
+ext.coil = dependencyGroup {
+    implementation Deps.coil
+}
+
+ext.core = dependencyGroup {
+    implementation project(':core')
+}
+
+ext.about = dependencyGroup {
+    implementation project(':features:about')
+}
+
+ext.dashboard = dependencyGroup {
+    implementation project(':features:dashboard')
+}
+
+ext.profile = dependencyGroup {
+    implementation project(':features:profile')
+}
+
+ext.unitTest = dependencyGroup {
+    testImplementation Deps.junit
+}
+
+ext.androidTest = dependencyGroup {
+    androidTestImplementation Deps.androidxExtJunit
+    androidTestImplementation Deps.androidxEspresso
+}
